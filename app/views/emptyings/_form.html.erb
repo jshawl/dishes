@@ -1,0 +1,28 @@
+<% if @notification %>
+<%= form_for(@notification) do |n| %>
+  <div class='bad'>
+    <%= n.button "Remind #{@next.name} to empty the fucking dishwasher" ,:type => 'submit' %>
+  </div>
+<% end %>
+<% end %>
+
+<%= form_for(@emptying) do |f| %>
+  <% if @emptying.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emptying.errors.count, "error") %> prohibited this emptying from being saved:</h2>
+
+      <ul>
+      <% @emptying.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="good">
+    <%= f.button 'I emptied the dishwasher', :type => 'submit' %>
+  </div>
+<% end %>

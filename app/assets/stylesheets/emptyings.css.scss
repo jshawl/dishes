@@ -1,0 +1,65 @@
+// Place all the styles related to the Emptyings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_user + a[href="/users/sign_up"]{
+  display:none;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+$bgBlue: #2e9dff;
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+a {
+  color:#fff;
+}
+
+body{
+  background-color:$bgBlue;
+  margin:0;
+  width:100%;
+  color:#fff;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width:90%;
+  margin:auto;
+  text-align:center;
+}
+
+h1{
+  font-family:'Pacifico';
+  text-align:center;
+  color:#fff;
+  text-shadow: 1px 1px 0px darken($bgBlue, 15%);
+  margin:0;
+}
+
+button{
+  background:darken($bgBlue, 25%);
+  border:none;
+  color:#fff;
+  font:inherit;
+  padding:.5em 1em;
+  border-radius:3px;
+  text-shadow:1px 1px 1px rgba(#000, .25);
+  margin:.5em 0;
+  display:block;
+  width:100%;
+  line-height:1.5;
+}
+
+.good button{
+  background:#72C153;
+  box-shadow:3px 3px 0px darken( #72c153, 20%);
+}
+.bad button{
+  background:#bf4f4f;
+  box-shadow:3px 3px 0px darken( #bf4f4f, 20%);
+}

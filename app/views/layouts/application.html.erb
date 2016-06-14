@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dishes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <h1>Dishes</h1>
+  <% if user_signed_in? %>
+    <small><%= link_to "Logout "+ current_user.email, destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></small>
+  <% end %>
+
+<%= yield %>
+
+</body>
+</html>

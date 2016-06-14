@@ -1,0 +1,7 @@
+<%= render 'form' %>
+<h1>Latest Emptyings</h1>
+<ul>
+  <% @emptyings.each do |emptying| %>
+    <li><%= time_ago_in_words(emptying.created_at) %> ago by <%= emptying.user.name %></li>
+  <% end %>
+</ul>
